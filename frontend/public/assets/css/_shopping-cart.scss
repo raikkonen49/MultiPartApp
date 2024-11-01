@@ -1,0 +1,323 @@
+.row-cart {
+    @media (max-width: 767px) {
+        max-width: 260px;
+    }
+    .shopping-cart-title-holder {
+        margin-bottom: 35px;
+        @media (max-width: 1400px) {
+            padding: 0 15px;
+        }
+        @media (max-width: 991px) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 767px) {
+            padding: 0;
+            text-align: center;
+        }
+        .shopping-cart-title {
+            font-size: 50px;
+            font-weight: 900;
+            color: #333333;
+            @media (max-width: 991px) {
+                font-size: 44px;
+            }
+            @media (max-width: 767px) {
+                font-size: 28px;
+            }
+        }
+        .cont-shopping {
+            @media (max-width: 767px) {
+                text-align: center;
+            }
+            a {
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 900;
+                color: #333333;
+                text-transform: uppercase;
+                padding-top: 40px;
+                position: relative;
+                transition: opacity 0.2s;
+                @media (max-width: 991px) {
+                    padding-top: 33px;
+                }
+                @media (max-width: 767px) {
+                    padding-top: 10px;
+                }
+                &:hover {
+                    opacity: 0.7;
+                }
+                &:before {
+                    position: relative;
+                    display: inline-block;
+                    content: '';
+                    top: 5px;
+                    left: -11px;
+                    width: 11px;
+                    height: 20px;
+                    background: url(../img/red-arrow.png) no-repeat center center;
+                }
+            }
+        }
+    }
+
+    .shopping-cart-container {
+        @media (max-width: 1400px) {
+            padding: 0 15px;
+        }
+        @media (max-width: 767px) {
+            padding: 0;
+        }
+        .shopping-cart-section-title {
+            padding: 0 30px;
+            margin-bottom: 13px;
+            @media (max-width: 767px) {
+                display: none;
+            }
+            > div {
+                font-size: 18px;
+                font-weight: 400;
+                color: #333333;
+            }
+            .shopping-cart-section-price {
+                padding-left: 12.5%;
+                @media (max-width: 991px) {
+                    padding-left: 12%;
+                }
+            }
+        }
+        .shopping-cart-block {
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            padding: 30px;
+            margin-bottom: 18px;
+            .shopping-cart-item-info {
+                .shopping-cart-item-info-img {
+                    img {
+                        max-width: 140px;
+                        max-height: 90px;
+                        @media (max-width: 991px) {
+                            max-width: 90px;
+                            max-height: 70px;
+                        }
+                        @media (max-width: 767px) {
+                            position: relative;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+                .shopping-cart-item-info-title {
+                    font-family: 'Circular Spotify Tx T';
+                    font-size: 14px;
+                    color: #777777;
+                    strong {
+                        font-family: 'Circular';
+                        font-weight: 900;
+                    }
+                    span {
+                        font-family: 'Circular';
+                        display: block;
+                        font-size: 18px;
+                        font-weight: 900;
+                        color: #333333;
+                    }
+                }
+            }
+            .shopping-cart-quantity {
+                input {
+                    height: 40px;
+                    width: 60px;
+                    border: 1px #e5e5e5 solid;
+                    border-radius: 4px;
+                    padding: 0 10px;
+                    font-family: 'Circular Spotify Tx T';
+                    font-size: 18px;
+                    font-weight: 300;
+                    color: #333333;
+                    @media (max-width: 767px) {
+                        height: 35px;
+                    }
+                }
+                span {
+                    display: inline-block;
+                    font-family: 'Circular Spotify Tx T';
+                    font-size: 18px;
+                    color: #777777;
+                    margin-left: 15px;
+                    @media (max-width: 767px) {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .shopping-cart-price {
+                font-size: 18px;
+                font-weight: 900;
+                color: #333333;
+                line-height: 38px;
+                @media (max-width: 767px) {
+                    text-align: center;
+                }
+            }
+            .shopping-cart-close {
+                position: relative;
+                @media (max-width: 767px) {
+                    padding-bottom: 20px;
+                }
+                span {
+                    position: absolute;
+                    display: inline-block;
+                    top: 10px;
+                    right: 0;
+                    width: 14px;
+                    height: 14px;
+                    background: url(../img/red-cross.png) no-repeat center center;
+                    cursor: pointer;
+                    transition: opacity 0.2s;
+                    @media (max-width: 767px) {
+                        right: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+
+    .shopping-cart-total-price-container {
+        padding-bottom: 60px;
+        border-bottom: 1px #e5e5e5 solid;
+        margin-bottom: 37px;
+        @media (max-width: 1400px) {
+            padding: 0 15px 60px 15px;
+        }
+        @media (max-width: 991px) {
+            padding: 0 15px 40px 15px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 767px) {
+            padding: 0 0 20px 0;
+            margin-bottom: 20px;
+        }
+        .shopping-cart-total-price-block {
+            width: 260px;
+            float: right;
+            margin-right: 12.7%;
+            @media (max-width: 767px) {
+                margin-right: 0;
+            }
+            .shopping-cart-total-price {
+                font-weight: 400;
+                color: #333333;
+                line-height: 36px;
+                border-bottom: 1px #e5e5e5 solid;
+                padding-bottom: 8px;
+                .shopping-cart-total-price-text {
+                    font-size: 18px;
+                }
+                .shopping-cart-total-price-number {
+                    font-size: 24px;
+                }
+            }
+            .shopping-cart-discount {
+                font-family: 'Circular Spotify Tx T';
+                font-size: 14px;
+                color: #777777;
+                padding: 15px 0;
+                @media (max-width: 767px) {
+                    padding: 10px 0;
+                }
+            }
+            .btn {
+                display: inline-block;
+                height: 50px;
+                background-color: #e63d49;
+                border: 2px #e63d49 solid;
+                font-size: 18px;
+                font-weight: 900;
+                color: #fff;
+                line-height: 46px;
+                padding: 0;
+                @media (max-width: 767px) {
+                    height: 40px;
+                    line-height: 36px;
+                }
+                &:hover {
+                    background-color: #bf3740;
+                    border-color: #bf3740;
+                }
+            }
+        }
+    }
+
+    .shopping-cart-bottom-info {
+        margin-bottom: 135px;
+        @media (max-width: 1400px) {
+            padding: 0 15px;
+        }
+        @media (max-width: 991px) {
+            > div {
+                margin-bottom: 20px;
+            }
+            margin-bottom: 20px;
+        }
+        @media (max-width: 767px) {
+            padding: 0 10px;
+            > div {
+                margin-bottom: 10px;
+            }
+        }
+        .shopping-cart-bottom-info-title {
+            font-size: 18px;
+            font-weight: 400;
+            color: #777777;
+            margin-bottom: 16px;
+            @media (max-width: 991px) {
+                margin-bottom: 10px;
+            }
+            @media (max-width: 767px) {
+                margin-bottom: 5px;
+                font-size: 16px;
+            }
+        }
+        .shopping-cart-bottom-info-text {
+            font-family: 'Circular Spotify Tx T';
+            font-size: 16px;
+            color: #777777;
+            @media (max-width: 767px) {
+                font-size: 14px;
+            }
+            a {
+                display: inline-block;
+                font-family: 'Circular';
+                color: #e63d49;
+                font-weight: 900;
+                transition: opacity 0.2s;
+                &:hover {
+                    opacity: 0.7;
+                }
+                img {
+                    margin-left: 5px;
+                }
+            }
+        }
+        .payment-list ul {
+            li {
+                margin-right: 0;
+                @media (max-width: 991px) {
+                    float: none;
+                    text-align: center;
+                }
+                img {
+                    max-width: 58px;
+                    @media (max-width: 1199px) {
+                        max-width: 53px;
+                    }
+                }
+            }
+        }
+    }
+}

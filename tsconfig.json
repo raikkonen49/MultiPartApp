@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    // compiler options...
+  },
+  "include": ["src/**/*", "src/custom.d.ts"]
+}

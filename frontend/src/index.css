@@ -1,0 +1,32 @@
+/* frontend/src/index.css */
+@font-face {
+  font-family: 'Circular Spotify Tx T';
+  src: url('./assets/fonts/circular-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Circular';
+  src: url('./assets/fonts/lineto-circular-pro-book.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Circular';
+  src: url('./assets/fonts/lineto-circular-pro-medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Circular';
+  src: url('./assets/fonts/lineto-circular-pro-bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Circular';
+  src: url('./assets/fonts/lineto-circular-pro-black.ttf');
+  font-weight: 900;
+}
+
+/* Другие пользовательские стили */

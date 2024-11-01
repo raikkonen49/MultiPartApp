@@ -1,0 +1,251 @@
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.mfp-open .mfp-figure {
+    -webkit-animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    -o-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    -ms-animation-duration: .5s;
+    -o-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
+}
+
+.share-social ul li {
+    line-height: 1;
+}
+
+.filters-container .filters-area > ul > li .filter-block-title.part {
+    padding-right: 44px;
+}
+
+.header.h-print {
+    padding: 10px 10px 20px 10px;
+    margin-bottom: 10px;
+}
+
+.row-order .parts-info-wrap {
+    padding-bottom: 0;
+}
+
+.row-order .parts-order-wrap .parts-order-block .part-number .print-share > span .share-wrap .share-block .share-social ul li a img {
+    max-height: 22px;
+}
+
+@media (max-width: 991px) {
+
+    .parts-item ul li {
+        height: 370px !important;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .parts-list-container > ul > li .pagination ul li a.next:hover {
+        height: 34px !important;
+        line-height: 34px !important;
+    }
+
+    .parts-item ul li {
+        height: auto !important;
+    }
+
+    .header-left.hold {
+        display: block;
+    }
+
+}
+
+@page {
+  margin: 10mm 5mm;
+}
+
+@media print {
+
+    .col-p-1, .col-p-2, .col-p-3, .col-p-4, .col-p-5, .col-p-6, .col-p-7, .col-p-8, .col-p-9, .col-p-10, .col-p-11, .col-p-12 {
+      float: left;
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .col-p-12 {
+      width: 100%;
+    }
+
+    .col-p-11 {
+      width: 91.66666667%;
+    }
+
+    .col-p-10 {
+      width: 83.33333333%;
+    }
+
+    .col-p-9 {
+      width: 75%;
+    }
+
+    .col-p-8 {
+      width: 66.66666667%;
+    }
+    .col-p-7 {
+      width: 58.33333333%;
+    }
+
+    .col-p-6 {
+      width: 50%;
+    }
+    .col-p-5 {
+      width: 41.66666667%;
+    }
+
+    .col-p-4 {
+      width: 33.33333333%;
+    }
+
+    .col-p-3 {
+      width: 25%;
+    }
+
+    .col-p-2 {
+      width: 16.66666667%;
+    }
+
+    .col-p-1 {
+      width: 8.33333333%;
+    }
+
+    a[href]:after {
+      content: none !important;
+    }
+
+    .row-order {
+        max-width: 1200px;
+    }
+
+    .row-order .parts-order-wrap .parts-order-slider-block, .row-order .parts-info-wrap .part-information-block {
+        padding-right: 10px;
+    }
+
+    .row-order .parts-order-wrap .parts-order-block, .row-order .parts-info-wrap .vehicle-information-block {
+        padding-left: 10px;
+        padding-right: 0;
+    }
+
+    .row-order .parts-order-wrap .parts-order-slider-block .lslide div {
+        height: 235px;
+    }
+
+    .row-order .parts-info-wrap .part-information-block::before {
+        right: 15px;
+    }
+
+    .row-order .parts-info-wrap .vehicle-information-block::before {
+        left: 15px;
+    }
+
+    .row-order .lslide, .lSSlideWrapper  {
+        height: 240px !important;
+    }
+
+    .row-order .parts-order-wrap .parts-order-block .in-stock-block {
+        padding: 10px 19px 10px 19px;
+    }
+
+    .row-order .parts-order-wrap .parts-order-block .parts-order-section .parts-order-functions .wish {
+        margin-left: 0;
+        padding: 0px 10px 0 30px;
+    }
+
+    .row-order .parts-order-wrap .parts-order-block .parts-order-section .parts-order-functions .wish::before {
+        left: 0px;
+    }
+
+    .row-order .parts-order-wrap .parts-order-block .parts-order-section .parts-order-functions .wish {
+        height: 37px;
+        line-height: 39px;
+    }
+
+    .row-order .parts-order-wrap .parts-order-block .parts-order-section .parts-order-price {
+        margin-bottom: 0
+    }
+
+    .row-order .parts-order-wrap .parts-order-block .parts-order-section {
+        padding: 10px 20px 4px 20px;
+    }
+
+    .row-order .parts-order-wrap .parts-order-block .parts-order-question-block .parts-order-delivery span.pickup .info-dropdown-wrap .info-dropdown::before {
+        margin-left: 40px;
+    }
+
+    .row-order .parts-info-wrap .part-information-block {
+        margin-bottom: 0;
+    }
+
+    .row-order .parts-order-wrap {
+        margin-bottom: 10px;
+    }
+
+    .row-order .parts-info-wrap .vehicle-information-block .parts-information-holder, .row-order .parts-info-wrap .part-information-block .parts-information-holder {
+        padding: 19px 15px 20px 15px;
+    }
+
+    .row-order .parts-order-wrap .parts-order-block .parts-order-question-block .parts-order-delivery,
+    .row-order .parts-order-wrap .parts-order-block .parts-order-question-block .parts-order-question {
+        font-size: 14px;
+    }
+
+    .row-order .parts-order-wrap .parts-order-block .parts-order-question-block .parts-order-question {
+        margin-bottom: 5px;
+    }
+
+    .row-order .parts-order-wrap .parts-order-block .in-stock-block {
+        margin-bottom: 10px;
+    }
+
+    .row-order .parts-technical-data-title {
+        margin-bottom: 15px;
+    }
+
+    .row-order .parts-info-wrap .part-information-block .parts-information-holder .parts-technical-data-info > ul > li {
+        font-size: 14px;
+    }
+
+    .row-order .parts-info-wrap .part-information-block {
+        height: 536px !important;
+    }
+
+    .header, .breadcrumbs, .row-ask, .footer-bg {
+        display: none;
+    }
+
+}
