@@ -1,0 +1,637 @@
+.checkout-top {
+    padding: 14px 93px 0 93px;
+    font-size: 50px;
+    font-weight: 900;
+    color: #333333;
+    margin-bottom: 67px;
+    @media (max-width: 991px) {
+        padding: 10px 10px 0 10px;
+        font-size: 44px;
+        margin-bottom: 40px;
+    }
+    @media (max-width: 767px) {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    a {
+        display: inline-block;
+        float: left;
+        @media (max-width: 991px) {
+            text-align: center;
+            display: block;
+            float: none;
+        }
+        @media (max-width: 767px) {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.checkout-part-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #333333;
+    margin-bottom: 25px;
+    @media (max-width: 991px) {
+        text-align: center;
+    }
+    @media (max-width: 767px) {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .circle {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        text-align: center;
+        background-color: #dddddd;
+        margin-right: 5px;
+        @media (max-width: 767px) {
+            height: 40px;
+            width: 40px;
+        }
+        span {
+            display: inline-block;
+            font-size: 36px;
+            font-weight: 900;
+            color: #fff;
+            position: relative;
+            top: -3px;
+            @media (max-width: 767px) {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+.checkout-title {
+    font-size: 24px;
+    font-weight: 900;
+    color: #333333;
+    @media (max-width: 767px) {
+        font-size: 22px;
+    }
+}
+
+.checkout-container {
+    @media (max-width: 1400px) {
+        padding: 0 15px;
+    }
+    @media (max-width: 767px) {
+        padding: 0 10px;
+    }
+    .checkout-block {
+        ul {
+            width: 100%;
+            li {
+                display: inline-block;
+                float: left;
+                width: 62%;
+                margin-right: 3.2%;
+                @media (max-width: 991px) {
+                    width: 100%;
+                    float: none;
+                    display: block;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                &:nth-child(2) {
+                    width: 34.8%;
+                    @media (max-width: 991px) {
+                        margin-right: 0;
+                        width: 45%;
+                    }
+                    @media (max-width: 767px) {
+                        width: 300px;
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                .sign-block {
+                    background-color: #f5f5f5;
+                    box-shadow: none !important;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    .sign-in-btn span {
+                        &:before, &:after {
+                            width: 120px;
+                        }
+                    }
+                    @media (max-width: 1199px) {
+                        padding: 30px 20px 43px 20px;
+                    }
+                    @media (max-width: 991px) {
+                        margin-bottom: 20px;
+                    }
+                    @media (max-width: 767px) {
+                        padding: 20px;
+                    }
+                }
+                .guest-checkout {
+                    background-color: #f5f5f5;
+                    border-top-right-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                    padding: 30px 14% 30px 30px;
+                    min-height: 427px;
+                    @media (max-width: 1199px) {
+                        padding: 30px 20px;
+                    }
+                    @media (max-width: 991px) {
+                        margin-bottom: 20px;
+                    }
+                    @media (max-width: 767px) {
+                        min-height: auto;
+                        padding: 20px;
+                    }
+                    .btn {
+                        display: inline-block;
+                        height: 50px;
+                        background-color: #e63d49;
+                        border: 2px #e63d49 solid;
+                        font-size: 18px;
+                        font-weight: 900;
+                        color: #fff;
+                        line-height: 46px;
+                        padding: 0;
+                        &:hover {
+                            background-color: #bf3740;
+                			color: #fff;
+                			border-color: #bf3740;
+                        }
+                    }
+                }
+                .checkout-title {
+                    margin-bottom: 8px;
+                }
+                .guest-message {
+                    font-family: 'Circular Spotify Tx T';
+                    font-size: 14px;
+                    color: #333333;
+                    margin-bottom: 17px;
+                }
+                .order-summary {
+                    margin-bottom: 32px;
+                    padding: 30px;
+                    border-radius: 4px;
+                    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+                    -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+                    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+                    @media (max-width: 1199px) {
+                        padding: 30px 20px;
+                    }
+                    @media (max-width: 767px) {
+                       padding: 15px 10px;
+                       margin-bottom: 20px;
+                    }
+                    .checkout-title {
+                        margin-bottom: 26px;
+                        .found-parts {
+                            font-family: 'Circular Spotify Tx T';
+                            font-size: 16px;
+                            margin-left: 0;
+                        }
+                        a {
+                            font-size: 12px;
+                            font-weight: 900;
+                            color: #333333;
+                            line-height: 1;
+                            text-transform: uppercase;
+                            display: inline-block;
+                            float: right;
+                            padding: 18px 0 6px;
+                            transition: color 0.2s;
+                            @media (max-width: 767px) {
+                                padding: 14px 0 6px;
+                            }
+                            &:hover {
+                                color:#e63d49;
+                            }
+                        }
+                    }
+                    .item-info {
+                        border-bottom: 1px #e5e5e5 solid;
+                        padding-bottom: 15px;
+                        .item-info-img {
+                            @media (max-width: 767px) {
+                               margin-bottom: 10px;
+                            }
+                            img {
+                                @media (max-width: 767px) {
+                                   position: relative;
+                                   left: 50%;
+                                   transform: translateX(-50%);
+                                   max-height: 100px;
+                                }
+                            }
+                        }
+                        .item-info-text {
+                            padding-left: 15px;
+                            @media (max-width: 767px) {
+                               padding-left: 0;
+                            }
+                            .item-info-title {
+                                font-size: 18px;
+                                font-weight: 900;
+                                color: #333333;
+                                line-height: 22px;
+                                margin-bottom: 4px;
+                            }
+                            .item-info-numbers {
+                                font-family: 'Circular Spotify Tx T';
+                                font-size: 14px;
+                                color: #777777;
+                                line-height: 22px;
+                                strong {
+                                    font-family: 'Circular';
+                                    font-weight: 900;
+                                }
+                            }
+                        }
+                        .item-info-price {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: #333333;
+                        }
+                    }
+                    .order-price {
+                        padding: 14px 0 13px 0;
+                        border-bottom: 1px #e5e5e5 solid;
+                        > div {
+                            font-family: 'Circular Spotify Tx T';
+                            font-size: 16px;
+                            color: #333333;
+                            strong {
+                                font-family: 'Circular';
+                                font-size: 18px;
+                                font-weight: 400;
+                            }
+                        }
+                        .discount-code {
+                            font-family: 'Circular Spotify Tx T';
+                            font-size: 14px;
+                            color: #777777;
+                            margin-top: 5px;
+                        }
+                    }
+                    .total-price {
+                        padding: 12px 0 4px 0;
+                        > div {
+                            font-family: 'Circular Spotify Tx T';
+                            font-size: 16px;
+                            color: #333333;
+                            height: 31px;
+                            span {
+                                display: inline-block;
+                                position: relative;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                            strong {
+                                font-family: 'Circular';
+                                font-size: 24px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                .secure {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #333333;
+                    @media (max-width: 991px) {
+                       margin-bottom: 30px;
+                    }
+                    .secure-text {
+                        margin-top: 14px;
+                        font-family: 'Circular Spotify Tx T';
+                        font-size: 16px;
+                        @media (max-width: 767px) {
+                           margin-top: 5px;
+                        }
+                        a {
+                            display: inline-block;
+                            transition: opacity 0.2s;
+                            margin-left: 5px;
+                            &:hover {
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.checkout-part-block {
+    width: 100%;
+    float: left;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 30px 60px 0 60px;
+    margin-bottom: 70px;
+    @media (max-width: 767px) {
+        margin-bottom: 20px;
+        padding: 20px 10px 0 10px;
+    }
+    .checkout-title {
+        margin-bottom: 21px;
+        @media (max-width: 767px) {
+            margin-bottom: 10px;
+        }
+    }
+    .checkout-input-wrap {
+        padding-bottom: 18px;
+        position: relative;
+        &:after {
+            position: absolute;
+            content: '';
+            left: -60px;
+            right: -60px;
+            bottom: 0;
+            height: 1px;
+            background-color: #e5e5e5;
+            @media (max-width: 767px) {
+                left: -10px;
+                right: -10px;
+            }
+        }
+        .checkout-input-holder {
+            margin-bottom: 12px;
+            font-family: 'Circular Spotify Tx T';
+            font-size: 18px;
+            color: #999999;
+            position: relative;
+            @media (max-width: 767px) {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+            &.active {
+                &:after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 2px;
+                    background-color: #333333;
+                }
+            }
+            > span {
+                display: inline-block;
+                color: #333333;
+                padding: 3px 0;
+            }
+            .checkout-input-left, .checkout-input-right {
+                > span {
+                    display: inline-block;
+                    color: #333333;
+                    padding: 3px 0;
+                }
+            }
+            .checkout-input-left {
+                padding-right: 5px;
+                position: relative;
+                @media (max-width: 767px) {
+                    padding-right: 0;
+                    margin-bottom: 5px;
+                }
+                &.active {
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        right: 5px;
+                        bottom: 0;
+                        height: 2px;
+                        background-color: #333333;
+                        @media (max-width: 767px) {
+                           right: 0;
+                        }
+                    }
+                }
+            }
+            .checkout-input-right {
+                padding-left: 5px;
+                position: relative;
+                @media (max-width: 767px) {
+                    padding-left: 0;
+                }
+                &.active {
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        left: 5px;
+                        right: 0;
+                        bottom: 0;
+                        height: 2px;
+                        background-color: #333333;
+                        @media (max-width: 767px) {
+                           left: 0;
+                        }
+                    }
+                }
+            }
+            input {
+                height: 50px;
+                width: 100%;
+                border: 1px #e5e5e5 solid;
+                border-radius: 4px;
+                padding: 0 20px;
+                font-family: 'Circular Spotify Tx T';
+                font-size: 18px;
+                font-weight: 300;
+                color: #333333;
+                @media (max-width: 767px) {
+                   height: 40px;
+                   font-size: 16px;
+                }
+            }
+            .select2-container {
+                width: 100% !important;
+                padding: 0 !important;
+                .select2-selection--single {
+                    height: 50px;
+                    border: 1px #e5e5e5 solid;
+                    @media (max-width: 767px) {
+                       height: 40px;
+                    }
+                    .select2-selection__rendered {
+                        line-height: 50px;
+                        font-size: 18px;
+                        color: #333333;
+                        padding: 0 20px;
+                        @media (max-width: 767px) {
+                           line-height: 40px;
+                           font-size: 16px;
+                        }
+                    }
+                    .select2-selection__arrow {
+                        background: url("../img/arrow-black-down.png") no-repeat center center;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .order-checkbox {
+        padding: 26px 0 36px 0;
+        position: relative;
+        @media (max-width: 767px) {
+            padding: 20px 0;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            left: -60px;
+            right: -60px;
+            bottom: 0;
+            height: 1px;
+            background-color: #e5e5e5;
+            @media (max-width: 767px) {
+                left: -10px;
+                right: -10px;
+            }
+        }
+        &.hold {
+            padding: 26px 0 20px 0;
+            @media (max-width: 767px) {
+                padding: 20px 0;
+            }
+            &:after {
+                display: none;
+            }
+        }
+        input {
+            display: none;
+        }
+        input + label {
+            background:url(../img/checkbox.png) no-repeat center left;
+            padding-left: 23px;
+            font-family: 'Circular Spotify Tx T';
+            font-size: 18px;
+            font-weight: 300;
+            color: #333333;
+            line-height: 16px;
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
+        }
+        input:checked + label, label.checked {
+            background:url(../img/checkbox-checked.png) no-repeat center left;
+        }
+    }
+}
+
+.radio-container {
+    padding: 30px 0 60px 0;
+    @media (max-width: 767px) {
+        padding: 20px 0 30px 0;
+    }
+    &.hold {
+        padding: 0 0 60px 0;
+        @media (max-width: 767px) {
+            padding: 0 0 30px 0;
+        }
+    }
+    .radio-block {
+        &.hold ul li .radio-item input + label {
+            padding-right: 20px;
+        }
+        > ul {
+            > li {
+               display: block;
+               float: left;
+               width: 100% !important;
+               margin-bottom: 5px;
+               &:last-child {
+                   margin-bottom: 0;
+               }
+               .radio-item {
+                   input {
+                       display: none;
+                   }
+                   input + label {
+                       background:url(../img/radio-1.png) no-repeat center left;
+                       background-position: 20px;
+                       padding: 0 30px 0 50px;
+                       font-family: 'Circular Spotify Tx T';
+                       font-size: 18px;
+                       font-weight: 300;
+                       color: #333333;
+                       line-height: 60px;
+                       width: 100%;
+                       height: 60px;
+                       background-color: #eaeaea;
+                       border-radius: 4px;
+                       cursor: pointer;
+                       @media (max-width: 767px) {
+                           font-size: 16px;
+                           height: 40px;
+                           line-height: 40px;
+                       }
+                       span {
+                           float: right;
+                           display: inline-block;
+                       }
+                       ul {
+                           display: inline-block;
+                           float: right;
+                           width: auto;
+                           @media (max-width: 767px) {
+                              display: none;
+                           }
+                           li {
+                               width: auto !important;
+                               display: inline-block;
+                               margin-right: 5px;
+                               left: 0;
+                               transform: translateX(0);
+                               &:last-child {
+                                   margin-right: 0;
+                               }
+                           }
+                       }
+                   }
+                   input:checked + label, label.checked {
+                       background:url(../img/radio-2.png) no-repeat center left;
+                       background-position: 20px;
+                       background-color: #ffffff;
+                       border: 2px #333333 solid;
+                   }
+               }
+           }
+       }
+    }
+}
+
+.checkout-footer {
+    font-family: 'Circular Spotify Tx T';
+    font-size: 18px;
+    font-weight: 300;
+    color: #777777;
+    margin-top: 24px;
+    margin-bottom: 71px;
+    padding: 0 15px;
+    @media (max-width: 767px) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+    a {
+        display: inline-block;
+        font-family: 'Circular';
+        font-weight: 900;
+        color: #e63d49;
+        transition: opacity 0.2s;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

@@ -1,0 +1,1234 @@
+.header {
+	padding: 30px 30px 17px;
+	background-color: #333333;
+	margin-bottom: 50px;
+	z-index: 100;
+	@media (max-width: 991px) {
+		margin-bottom: 30px;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 20px;
+	}
+	&.hold {
+		background: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin-bottom: 0;
+	}
+	@media (max-width: 1500px) {
+		padding: 20px 15px 0;
+	}
+	@media (max-width: 1199px) {
+		padding: 20px 10px;
+	}
+
+	> div {
+		@media (max-width: 767px) {
+			text-align: center;
+		}
+
+		.trigger {
+			display: inline-block;
+			float: left;
+			margin: 19px 6.5% 0 0;
+			@media (max-width: 1500px) {
+				margin: 9px 15px 0 0;
+			}
+			@media (max-width: 991px) {
+				margin: 9px 10px 0 0;
+			}
+			@media (max-width: 767px) {
+				float: none;
+				margin: 0 10px 0 0;
+			}
+
+			span {
+				display: block;
+				width: 23px;
+				height: 21px;
+				background: url("../img/hamburger.png") no-repeat center center;
+				cursor: pointer;
+				&.down {
+					background: url("../img/hamburger-red.png") no-repeat center center;
+				}
+			}
+		}
+
+		.logo {
+			display: inline-block;
+			float: left;
+			position: relative;
+			padding-top: 5px;
+			margin-right: 6.5%;
+			@media (max-width: 1500px) {
+				margin: 0 15px 0 0;
+				padding-top: 0;
+			}
+			@media (max-width: 991px) {
+				margin: 0 15px 0 0;
+			}
+			@media (max-width: 767px) {
+				float: none;
+				margin: 0;
+				position: relative;
+				top: -5px;
+			}
+
+			span {
+				font-family: 'Circular Spotify Tx T';
+				position: absolute;
+				display: block;
+				top: 100%;
+				right: 0;
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 18px;
+				color: #fff;
+				@media (max-width: 991px) {
+					font-size: 12px;
+				}
+			}
+
+			a {
+				display: block;
+				transition: opacity 0.2s;
+				&:hover {
+					opacity: 0.7;
+				}
+
+				img {
+					@media (max-width: 1500px) {
+						max-width: 120px;
+					}
+					@media (max-width: 991px) {
+						max-width: 100px;
+					}
+				}
+			}
+		}
+
+		.nav {
+			display: inline-block;
+			float: left;
+			padding-top: 14px;
+			@media (max-width: 767px) {
+				float: none;
+				display: none;
+				margin-top: 30px;
+			}
+			@media (max-width: 500px) {
+				height: 55px;
+			}
+
+			> ul {
+				@media (max-width: 767px) {
+					display: inline-block;
+				}
+
+				> li {
+					display: inline-block;
+					float: left;
+					margin-right: 15px;
+					position: relative;
+
+					&:hover a {
+						background-color: #555555;
+					}
+
+					&:hover ul {
+						visibility: visible;
+						opacity: 1;
+					}
+					@media (max-width: 1500px) {
+						margin-right: 10px;
+					}
+					@media (max-width: 991px) {
+						margin-right: 5px;
+					}
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					&:last-child a:hover {
+						background: none;
+					}
+
+					> a {
+						font-family: 'Circular Spotify Tx T';
+						font-size: 16px;
+						font-weight: 300;
+						line-height: 24px;
+						color: #fff;
+						padding: 10px 0;
+						position: relative;
+						border-radius: 4px;
+						text-decoration: none;
+						display: block;
+						@media (max-width: 1500px) {
+							font-size: 14px;
+							line-height: 22px;
+						}
+					}
+
+					&:first-child a {
+						padding: 10px 25px 15px 15px;
+						transition: background-color 0.2s;
+						@media (max-width: 991px) {
+							padding: 10px 20px 16px 10px;
+						}
+						@media (max-width: 767px) {
+							padding: 10px 20px 11px 10px;
+						}
+
+						&::after {
+							position: absolute;
+							content: '';
+							right: 12px;
+							top: 22px;
+							width: 7px;
+							height: 4px;
+							background: url("../img/down.png") no-repeat center center;
+							@media (max-width: 1500px) {
+								top: 21px;
+							}
+							@media (max-width: 991px) {
+								right: 8px;
+								top: 20px;
+							}
+						}
+					}
+
+					&:last-child a {
+						transition: color 0.2s;
+						&:hover {
+							color: #e63d49;
+						}
+						&:hover:before {
+							background-position: -39px -5px;
+						}
+						&:before {
+							position: absolute;
+							content: '';
+							top: -15px;
+							left: 50%;
+							transform: translateX(-50%);
+							width: 24px;
+							height: 23px;
+							background: url("../img/req-sp.png") no-repeat center center;
+							background-position: -5px -5px;
+						}
+					}
+
+					> ul {
+						position: absolute;
+						top: 44px;
+						background-color: #555555;
+						padding: 7px 0;
+						border-radius: 4px;
+						transition: visibility 0.2s, opacity 0.2s;
+						visibility: hidden;
+						opacity: 0;
+						z-index: 100;
+						@media (max-width: 1500px) {
+							top: 42px;
+						}
+						@media (max-width: 991px) {
+							top: 37px;
+						}
+
+						> li {
+							display: block;
+							white-space: nowrap;
+
+							&:last-child {
+								margin-bottom: 0;
+							}
+							@media (max-width: 1500px) {
+								margin-bottom: 3px;
+							}
+
+							> a {
+								font-family: 'Circular Spotify Tx T';
+								font-size: 16px;
+								font-weight: 300;
+								line-height: 26px;
+								color: #fff;
+								padding: 0 15px !important;
+								display: block;
+								transition: background-color 0.2s;
+								@media (max-width: 1500px) {
+									font-size: 14px;
+									line-height: 22px;
+								}
+								@media (max-width: 991px) {
+									padding: 0 10px !important;
+								}
+
+								&::after {
+									display: none;
+								}
+
+								&:hover {
+									background-color: #444444;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.header-search-block {
+		padding: 0 10px;
+		&.hold {
+			display: none;
+		}
+		@media (max-width: 1500px) {
+			padding-right: 30px;
+		}
+		@media (max-width: 1199px) {
+			margin-top: 10px;
+			padding: 0;
+		}
+		@media (max-width: 500px) {
+			margin-top: 5px;
+		}
+
+		.header-search {
+			position: relative;
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 50%;
+				transform: translateY(-50%);
+				left: 17px;
+				width: 28px;
+				height: 27px;
+				background: url("../img/search-red.png") no-repeat center center;
+				background-size: contain;
+				@media (max-width: 1500px) {
+					width: 20px;
+					height: 19px;
+					left: 15px;
+				}
+			}
+
+			input {
+				width: 100%;
+				height: 50px;
+				background-color: #444444;
+				border: none;
+				border-radius: 4px;
+				font-size: 18px;
+				font-weight: 400;
+				color: #aaaaaa;
+				padding: 10px 20px 10px 58px;
+				@media (max-width: 1600px) {
+					font-size: 16px;
+				}
+				@media (max-width: 1500px) {
+					font-size: 14px;
+					height: 40px;
+					padding: 10px 20px 10px 45px;
+				}
+
+				&::-webkit-input-placeholder {
+					opacity: 1;
+					color: #aaaaaa;
+				}
+
+				&::-moz-placeholder {
+					opacity: 1;
+					color: #aaaaaa;
+				}
+
+				&:-ms-input-placeholder {
+					opacity: 1;
+					color: #aaaaaa;
+				}
+
+				&:-moz-placeholder {
+					opacity: 1;
+					color: #aaaaaa;
+				}
+			}
+		}
+
+		.header-search-btn-holder {
+			padding-left: 5px;
+			.btn {
+				height: 50px;
+				border: 2px #aaaaaa solid;
+				border-radius: 4px;
+				background-color: #aaaaaa;
+				font-size: 18px;
+				font-weight: 900;
+				color: #333333;
+				@media (max-width: 1500px) {
+					font-size: 16px;
+					height: 40px;
+				}
+
+				&:hover {
+					background-color: #333333;
+					color: #aaaaaa;
+				}
+			}
+		}
+	}
+
+	.header-info-block {
+		padding-top: 25px;
+
+		@media (max-width: 1500px) {
+			padding-top: 22px;
+		}
+		@media (max-width: 767px) {
+			display: none;
+		}
+		@media (max-width: 500px) {
+			padding-top: 15px;
+		}
+		&.mob {
+			display: none;
+			@media (max-width: 767px) {
+				display: block;
+			}
+			> ul {
+				> li:last-child {
+					display: none;
+					@media (max-width: 767px) {
+						display: inline-block;
+					}
+					a {
+						position: relative;
+						&.request {
+							transition: color 0.2s;
+							&:hover {
+								color: #e63d49;
+							}
+							&:hover:before {
+								background-position: -39px -5px;
+							}
+							&:before {
+								position: absolute;
+								content: '';
+								top: -15px;
+								left: 50%;
+								transform: translateX(-50%);
+								width: 24px;
+								height: 23px;
+								background: url("../img/req-sp.png") no-repeat center center;
+								background-position: -5px -5px;
+								@media (max-width: 500px) {
+									top: -5px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		> ul {
+			float: right;
+			@media (max-width: 767px) {
+				float: none;
+			}
+			@media (max-width: 500px) {
+				width: 200px;
+				margin: auto;
+			}
+
+			> li {
+				float: left;
+				display: inline-block;
+				margin-right: 20px;
+				position: relative;
+
+				&:hover .account-dropdown {
+					opacity: 1;
+					visibility: visible;
+				}
+				@media (max-width: 1500px) {
+					margin-right: 15px !important;
+				}
+				@media (max-width: 991px) {
+					margin-right: 10px !important;
+				}
+				@media (max-width: 767px) {
+					float: none;
+				}
+				@media (max-width: 500px) {
+					display: inline-block;
+					float: left;
+					width: 20%;
+					margin-right: 0 !important;
+				}
+
+				.account-dropdown {
+					position: absolute;
+					top: 45px;
+					left: -60px;
+					text-align: center;
+					background-color: #555555;
+					border-radius: 4px;
+					padding: 17px 15px;
+					width: 210px;
+					opacity: 0;
+					visibility: hidden;
+					z-index: 100;
+					transition: visibility 0.2s, opacity 0.2s;
+					@media (max-width: 1500px) {
+						width: 190px;
+						padding: 15px;
+						left: -55px;
+						top: 40px;
+					}
+					@media (max-width: 767px) {
+						padding: 10px;
+						width: 160px;
+						left: -40px;
+					}
+					@media (max-width: 500px) {
+						left: 50%;
+						transform: translateX(-50%);
+					}
+
+					&.down {
+						opacity: 1;
+					}
+
+					&:before {
+						position: absolute;
+						content: '';
+						top: -12px;
+						left: 50%;
+						transform: translateX(-50%);
+						width: 48px;
+						height: 12px;
+						background: url("../img/dropdown-arrow.png") no-repeat center center;
+					}
+
+					.dropdown-title {
+						font-size: 18px;
+						font-weight: 900;
+						color: #fff;
+						margin-bottom: 10px;
+						position: relative;
+						@media (max-width: 767px) {
+							font-size: 16px;
+							margin-bottom: 5px;
+						}
+
+						&:before {
+							position: relative;
+							content: '';
+							display: inline-block;
+							top: 3px;
+							left: -10px;
+							width: 16px;
+							height: 21px;
+							background: url("../img/account-grey.png") no-repeat center center;
+							@media (max-width: 767px) {
+								left: -3px;
+							}
+						}
+					}
+
+					.dropdown-bth-holder {
+						margin-bottom: 10px;
+						@media (max-width: 1500px) {
+							margin-bottom: 5px;
+						}
+
+						.dropdown-bth {
+							display: inline-block;
+							width: 180px;
+							height: 50px;
+							padding: 0;
+							background-color: #e63d49;
+							border: 2px #e63d49 solid;
+							border-radius: 4px;
+							font-size: 18px;
+							font-weight: 900;
+							color: #fff;
+							line-height: 45px;
+							transition: background-color 0.2s, border-color 0.2s;
+							@media (max-width: 1500px) {
+								width: 160px;
+								height: 40px;
+								line-height: 35px;
+							}
+							@media (max-width: 767px) {
+								font-size: 14px;
+								width: 120px;
+								height: 30px;
+								line-height: 25px;
+							}
+
+							&:hover {
+								background-color: #bf3740;
+								border-color: #bf3740;
+							}
+						}
+					}
+
+					.dropdown-register {
+						font-family: 'Circular Spotify Tx T';
+						font-size: 16px;
+						font-weight: 300;
+						color: #aaaaaa;
+						@media (max-width: 767px) {
+							font-size: 14px;
+						}
+
+						a {
+							color: #ffffff;
+
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+				.cart-dropdown {
+					display: none;
+					position: absolute;
+					top: 45px;
+					right: 0;
+					text-align: center;
+					background-color: #555555;
+					border-radius: 4px;
+					padding: 20px;
+					width: 400px;
+					z-index: 100;
+					transition: visibility 0.2s, opacity 0.2s;
+					@media (max-width: 991px) {
+						width: 330px;
+						padding: 10px;
+					}
+					@media (max-width: 767px) {
+						width: 300px;
+					}
+					@media (max-width: 500px) {
+						right: -90px;
+						top: 40px;
+					}
+					> span {
+						position: absolute;
+						top: 20px;
+						right: 15px;
+						width: 10px;
+						height: 10px;
+						background: url("../img/red-cross.png") no-repeat center center;
+						background-size: contain;
+						cursor: pointer;
+						transition: opacity 0.2s;
+						z-index: 10;
+						&:hover {
+							opacity: 0.7;
+						}
+						@media (max-width: 991px) {
+							top: 10px;
+							right: 10px;
+						}
+					}
+					&:before {
+						position: absolute;
+						content: '';
+						top: -12px;
+						right: 25px;
+						width: 48px;
+						height: 12px;
+						background: url("../img/dropdown-arrow.png") no-repeat center center;
+						@media (max-width: 500px) {
+							right: 83px;
+						}
+					}
+					.cart-dropdown-top {
+						padding-bottom: 21px;
+						border-bottom: 1px #666666 solid;
+						@media (max-width: 991px) {
+							padding-bottom: 10px;
+						}
+						ul {
+							width: 100%;
+							li {
+								display: inline-block;
+								float: left;
+								&:first-child {
+									width: 26.5%;
+								}
+								&:last-child {
+									width: 73.5%;
+								}
+								.cart-img {
+									height: 60px;
+									background-size: cover !important;
+								}
+								.cart-title {
+									font-size: 16px;
+									font-weight: 900;
+									color: #fff;
+									line-height: 20px;
+									text-align: left;
+									margin-top: -5px;
+									margin-bottom: 8px;
+									@media (max-width: 991px) {
+										font-size: 14px;
+										line-height: 18px;
+										margin-bottom: 3px;
+										padding-left: 10px;
+										margin-top: -3px;
+									}
+								}
+								.cart-item-price {
+									font-family: 'Circular Spotify Tx T';
+									font-size: 16px;
+									font-weight: 300;
+									color: #aaaaaa;
+									text-align: left;
+									line-height: 1;
+									@media (max-width: 991px) {
+										font-size: 14px;
+										line-height: 18px;
+										padding-left: 10px;
+									}
+									span {
+										display: inline-block;
+										font-family: 'Circular';
+										font-weight: 400;
+										color: #fff;
+										margin-left: 8px;
+									}
+								}
+							}
+						}
+					}
+					.cart-price {
+						text-align: right;
+						font-family: 'Circular Spotify Tx T';
+						font-size: 16px;
+						font-weight: 300;
+						color: #aaaaaa;
+						padding: 4px 0 11px 0;
+						@media (max-width: 991px) {
+							font-size: 14px;
+							padding: 5px 0;
+						}
+						span {
+							display: inline-block;
+							font-family: 'Circular';
+							font-size: 24px;
+							font-weight: 400;
+							color: #fff;
+							margin-left: 5px;
+							@media (max-width: 991px) {
+								font-size: 20px;
+							}
+						}
+					}
+					.cart-dropdown-bottom {
+						ul {
+							width: 100%;
+							li {
+								display: inline-block;
+								float: left;
+								margin-right: 5px;
+								&:first-child {
+									width: 37.5%;
+								}
+								&:last-child {
+									width: 61.115%;
+									margin-right: 0;
+									@media (max-width: 991px) {
+										width: 60.099%;
+									}
+								}
+								a.btn {
+									font-size: 18px;
+									font-weight: 900;
+									line-height: 33px;
+									@media (max-width: 991px) {
+										font-size: 14px;
+										line-height: 20px;
+									}
+									&.c-out {
+										border: 2px #888888 solid;
+										background-color: #888888;
+										&:hover {
+											background-color: #fff;
+											color: #888888;
+										}
+									}
+									&.c-view {
+										border: 2px #e63d49 solid;
+										background-color: #e63d49;
+										color: #fff;
+										&:hover {
+											background-color: #bf3740;
+											border-color: #bf3740;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				> a {
+					font-family: 'Circular Spotify Tx T';
+					font-size: 16px;
+					font-weight: 300;
+					color: #fff;
+					line-height: 20px;
+					position: relative;
+					transition: color 0.2s;
+					padding-top: 22px;
+					padding-bottom: 20px;
+					@media (max-width: 1500px) {
+						font-size: 14px;
+						line-height: 18px;
+					}
+					@media (max-width: 500px) {
+						display: inline-block;
+						padding-bottom: 0;
+					}
+
+					&:before {
+						position: absolute;
+						content: '';
+						background: url("../img/spritesheet.png") no-repeat center center;
+						left: 50%;
+						transform: translateX(-50%);
+						top: -5px;
+					}
+
+					&:hover {
+						color: #e63d49;
+					}
+
+					&.phone:hover:before {
+						background-position: -82px -5px;
+					}
+
+					&.phone:before {
+						left: -12px;
+						top: 23px;
+						width: 15px;
+						height: 15px;
+						background-position: -57px -5px;
+						@media (max-width: 1500px) {
+							top: 21px;
+						}
+						@media (max-width: 500px) {
+							top: 0;
+							left: auto;
+						}
+					}
+
+					&.account:before {
+						width: 16px;
+						height: 21px;
+						background-position: -5px -5px;
+					}
+
+					&.account:hover:before {
+						background-position: -31px -5px;
+					}
+
+					&.wish:before {
+						width: 22px;
+						height: 19px;
+						background-position: -71px -30px;
+					}
+
+					&.wish:hover:before {
+						background-position: -71px -59px;
+					}
+
+					&.cart:before {
+						width: 23px;
+						height: 23px;
+						background-position: -5px -36px;
+					}
+
+					&.cart:hover:before {
+						background-position: -38px -36px;
+					}
+
+					.wish-ball {
+						top: -10px;
+						right: 30px;
+						left: auto;
+						font-size: 14px;
+						@media (max-width: 1500px) {
+							font-size: 12px;
+							top: -15px;
+							right: 25px;
+						}
+						@media (max-width: 767px) {
+							font-size: 10px;
+						}
+						@media (max-width: 500px) {
+							top: -10px;
+							right: -20px;
+						}
+						span {
+							padding: 5px 6px 2px 6px;
+							@media (max-width: 767px) {
+								padding: 4px 6px 3px 5px;
+							}
+						}
+					}
+					> span {
+						@media (max-width: 500px) {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.header-left {
+	position: relative;
+	@media (max-width: 767px) {
+		display: none;
+	}
+	.side-bar {
+		background-color: #555555;
+		position: absolute;
+		left: -20px;
+		top: 67px;
+		width: 260px;
+		z-index: 10000;
+		padding-bottom: 13px;
+		border-radius: 4px;
+		display: none;
+		@media (max-width: 1500px) {
+			left: -10px;
+		}
+		@media (max-width: 1200px) {
+			left: -5px;
+		}
+		@media (max-width: 991px) {
+			padding-bottom: 5px;
+		}
+		@media (max-width: 767px) {
+			text-align: left;
+			width: 240px;
+			top: 45px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		&:before {
+			position: absolute;
+			content: '';
+			bottom: 100%;
+			left: 7px;
+			width: 48px;
+			height: 12px;
+			background: url("../img/dropdown-arrow.png") no-repeat center center;
+			@media (max-width: 1500px) {
+				left: 0;
+			}
+			@media (max-width: 767px) {
+				left: 39px;
+			}
+		}
+		.side-bar-contacts {
+			padding: 23px 0 10px 0;
+			border-bottom: 1px #444444 solid;
+			margin-bottom: 8px;
+			@media (max-width: 991px) {
+				padding: 10px 0;
+			}
+			a {
+				display: inline-block;
+				font-family: 'Circular Spotify Tx T';
+				font-size: 16px;
+				color: #ffffff;
+				position: relative;
+				padding-left: 17px;
+				@media (max-width: 991px) {
+					font-size: 14px;
+				}
+				&:hover {
+					color: #e63d49;
+				}
+				&:hover:before {
+					background-position: -82px -5px;
+				}
+				&:before {
+					position: relative;
+					display: inline-block;
+					content: '';
+					background: url("../img/spritesheet.png") no-repeat center center;
+					left: -5px;
+					top: 2px;
+					width: 15px;
+					height: 15px;
+					background-position: -57px -5px;
+				}
+			}
+		}
+		.side-bar-group {
+			border-bottom: 1px #444444 solid;
+			.side-bar-group-title {
+				font-size: 18px;
+				font-weight: 900;
+				color: #fff;
+				padding-left: 40px;
+				padding-bottom: 10px;
+				position: relative;
+				position: relative;
+				@media (max-width: 991px) {
+					font-size: 16px;
+				}
+				span {
+					position: absolute;
+					right: 19px;
+					top: 7px;
+					width: 16px;
+					height: 16px;
+					background: url("../img/tr-plius.png") no-repeat center center;
+					cursor: pointer;
+					transition: opacity 0.2s;
+					&:hover {
+						opacity: 0.6;
+					}
+					@media (max-width: 991px) {
+						top: 5px;
+					}
+					&.down {
+						background: url("../img/tr-minus.png") no-repeat center center;
+					}
+				}
+				&:before {
+					position: absolute;
+					content: '';
+					top: 3px;
+					left: 7px;
+					width: 20px;
+					height: 19px;
+					background: url("../img/group.png") no-repeat center center;
+				}
+			}
+		}
+
+		.side-bar-account {
+			font-size: 18px;
+			font-weight: 900;
+			color: #fff;
+			padding: 8px 10px 8px 40px;
+			position: relative;
+			border-bottom: 1px #444444 solid;
+			@media (max-width: 991px) {
+				font-size: 16px;
+				padding: 5px 10px 5px 40px;
+			}
+			&:before {
+				position: absolute;
+				content: '';
+				top: 11px;
+				left: 11px;
+				width: 16px;
+				height: 21px;
+				background: url("../img/account-grey.png") no-repeat center center;
+			}
+			.side-bar-register {
+				font-family: 'Circular Spotify Tx T';
+				font-size: 16px;
+				font-weight: 300;
+				span {
+					display: inline-block;
+					@media (max-width: 991px) {
+						font-size: 14px;
+					}
+					a {
+						font-family: 'Circular Spotify Tx T';
+						font-size: 16px;
+						font-weight: 300;
+						color: #ffffff;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+		.side-bar-wish {
+			border-bottom: 1px #444444 solid;
+			position: relative;
+			a {
+				font-size: 18px;
+				font-weight: 900;
+				color: #fff;
+				padding: 8px 10px 8px 40px;
+				display: block;
+				transition: color 0.2s, background-color 0.2s;
+				@media (max-width: 991px) {
+					font-size: 16px;
+					padding: 5px 10px 5px 40px;
+				}
+				&:hover:before {
+					background-position: -37px -5px;
+				}
+				&:before {
+					position: absolute;
+					content: '';
+					top: 50%;
+					left: 9px;
+					transform: translateY(-50%);
+					width: 22px;
+					height: 19px;
+					background: url("../img/wish.png") no-repeat center center;
+					background-position: -5px -5px;
+				}
+				&:hover {
+					background-color: #444444;
+					color: #e63d49;
+				}
+			}
+		}
+		.side-bar-request {
+			border-bottom: 1px #444444 solid;
+			a {
+				font-size: 18px;
+				font-weight: 900;
+				color: #fff;
+				padding: 8px 10px 8px 40px;
+				display: block;
+				transition: color 0.2s, background-color 0.2s;
+				@media (max-width: 991px) {
+					font-size: 16px;
+					padding: 5px 10px 5px 40px;
+				}
+				&:hover:before {
+					background-position: -39px -5px;
+				}
+				&:before {
+					position: absolute;
+					content: '';
+					top: 50%;
+					left: 9px;
+					transform: translateY(-50%);
+					width: 24px;
+					height: 23px;
+					background: url("../img/req-side.png") no-repeat center center;
+					background-position: -5px -5px;
+				}
+				&:hover {
+					background-color: #444444;
+					color: #e63d49;
+				}
+			}
+		}
+		.side-bar-contact-us {
+			border-bottom: 1px #444444 solid;
+			a {
+				font-family: 'Circular Spotify Tx T';
+				font-size: 16px;
+				font-weight: 300;
+				color: #fff;
+				padding: 8px 10px 8px 40px;
+				display: block;
+				transition: color 0.2s;
+				@media (max-width: 991px) {
+					font-size: 14px;
+					padding: 5px 10px 5px 40px;
+				}
+				&:hover {
+					color: #e63d49;
+				}
+			}
+		}
+		.side-bar-about-us {
+			a {
+				font-family: 'Circular Spotify Tx T';
+				font-size: 16px;
+				font-weight: 300;
+				color: #fff;
+				padding: 8px 10px 8px 40px;
+				display: block;
+				transition: color 0.2s;
+				@media (max-width: 991px) {
+					font-size: 14px;
+					padding: 5px 10px 5px 40px;
+				}
+				&:hover {
+					color: #e63d49;
+				}
+			}
+		}
+	}
+}
+
+.header-left.mob {
+	display: none;
+	@media (max-width: 767px) {
+		display: block;
+	}
+	.logo {
+		float: left;
+		a {
+			display: inline-block;
+		}
+		span {
+			left: 50%;
+			transform: translateX(-50%);
+			right: auto;
+			margin-left: 20px;
+		}
+	}
+	.trigger {
+		float: left;
+		margin-right: 0;
+		span {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.nav {
+		display: none;
+		@media (max-width: 767px) {
+			display: inline-block;
+			float: left;
+			margin-top: 0;
+			padding-top: 0;
+			width: 33.3333%;
+		}
+		  ul {
+			  li {
+				  a::before {
+					display: none;
+				}
+				> a:hover {
+					background-color: #555555 !important
+				}
+			}
+			ul {
+				right: 0;
+			}
+		}
+	}
+	.side-bar {
+		&::before {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}

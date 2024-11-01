@@ -1,0 +1,1436 @@
+.intro-container {
+	background-size: cover !important;
+	padding-top: 160px;
+	padding-bottom: 80px;
+	margin-bottom: 60px;
+	@media (max-width: 991px) {
+		padding-top: 130px;
+		margin-bottom: 40px;
+	}
+	@media (max-width: 767px) {
+		padding-top: 135px;
+		margin-bottom: 20px;
+		padding-bottom: 40px;
+	}
+	@media (max-width: 500px) {
+		padding-top: 125px;
+	}
+
+	.intro-title {
+		font-size: 50px;
+		font-weight: 900;
+		color: #fff;
+		text-align: center;
+		margin-bottom: 30px;
+		@media (max-width: 1500px) {
+			font-size: 44px;
+			margin-bottom: 20px;
+		}
+		@media (max-width: 991px) {
+			font-size: 38px;
+			margin-bottom: 10px;
+		}
+		@media (max-width: 767px) {
+			font-size: 28px;
+			line-height: 32px;
+		}
+
+		span {
+			display: block;
+			font-family: 'Circular Spotify Tx T';
+			font-size: 20px;
+			font-weight: 300;
+			color: #ffffff;
+			@media (max-width: 1500px) {
+				font-size: 18px;
+			}
+			@media (max-width: 991px) {
+				font-size: 16px;
+			}
+			@media (max-width: 767px) {
+				font-size: 14px;
+				line-height: 18px;
+				margin-top: 5px;
+			}
+		}
+	}
+
+	.intro-search-holder {
+		margin-bottom: 40px;
+		position: relative;
+		z-index: 10000;
+		@media (max-width: 767px) {
+			padding: 0 10px;
+			margin-bottom: 30px;
+		}
+		.search-info-btn {
+			display: block;
+			position: absolute;
+			right: -60px;
+			top: 15px;
+			width: 30px;
+			height: 30px;
+			border: 2px #e63d49 solid;
+			border-radius: 100%;
+			background: url("../img/info.png") no-repeat center center;
+			cursor: pointer;
+			@media (max-width: 1500px) {
+				top: 10px;
+			}
+			@media (max-width: 767px) {
+				width: 25px;
+				height: 25px;
+				bottom: -32px;
+				top: auto;
+				right: auto;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+			&.down {
+				background: #e63d49 url("../img/info.png") no-repeat center center;
+			}
+			.search-info {
+				display: none;
+				position: absolute;
+				top: 50px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 360px;
+				background-color: #555555;
+				border-radius: 4px;
+				padding: 20px;
+				cursor: text;
+				@media (max-width: 1199px) {
+					width: 290px;
+					padding: 10px;
+				}
+				&:before {
+					position: absolute;
+					content: '';
+					top: -12px;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 48px;
+					height: 12px;
+					background: url("../img/dropdown-arrow.png") no-repeat center center;
+				}
+				.search-info-title {
+					font-size: 24px;
+					font-weight: 900;
+					color: #fff;
+					text-align: center;
+					margin-bottom: 8px;
+					@media (max-width: 1199px) {
+						font-size: 22px;
+						margin-bottom: 5px;
+					}
+				}
+				ul {
+					width: 100%;
+					li {
+						display: inline-block;
+						float: left;
+						&:first-child {
+							width: 56%;
+						}
+						&:last-child {
+							width: 44%;
+						}
+						.search-info-left {
+							text-align: right;
+							border-right: 1px #666666 solid;
+							.search-info-type, .search-info-text {
+								padding-right: 10px;
+								@media (max-width: 1199px) {
+									padding-right: 5px;
+								}
+							}
+						}
+						.search-info-right {
+							text-align: left;
+							.search-info-type, .search-info-text {
+								padding-left: 10px;
+								@media (max-width: 1199px) {
+									padding-left: 5px;
+								}
+							}
+						}
+						.search-info-right, .search-info-left {
+							.search-info-type {
+								font-size: 14px;
+								font-weight: 900;
+								color: #fff;
+								text-transform: uppercase;
+								background-color: #e63d49;
+								padding-top: 3px;
+								padding-bottom: 3px;
+								margin-bottom: 3px;
+								@media (max-width: 1199px) {
+									font-size: 12px;
+								}
+							}
+							.search-info-text {
+								p {
+									font-family: 'Circular Spotify Tx T';
+									font-weight: 300;
+									font-size: 14px;
+									color: #fff;
+									line-height: 24px;
+									@media (max-width: 1199px) {
+										font-size: 12px;
+										line-height: 22px;
+									}
+									strong {
+										font-family: 'Circular';
+										font-weight: 900;
+									}
+								}
+								.search-info-text-number {
+									margin-bottom: 3px;
+									&.hold {
+										margin-top: 25px;
+										@media (max-width: 1199px) {
+											margin-top: 23px;
+										}
+									}
+								}
+								.search-info-text-name {
+									p {
+										margin-bottom: 5px;
+										&:last-child {
+											margin-bottom: 0;
+										}
+									}
+									&.hold {
+										margin-top: 3px;
+										@media (max-width: 1199px) {
+											margin-top: 2px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.intro-search {
+			padding-right: 5px;
+			position: relative;
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 50%;
+				transform: translateY(-50%);
+				left: 17px;
+				width: 28px;
+				height: 27px;
+				background: url("../img/search-red.png") no-repeat center center;
+				background-size: contain;
+				@media (max-width: 1500px) {
+					width: 20px;
+					height: 19px;
+					left: 15px;
+				}
+			}
+
+			input {
+				width: 100%;
+				height: 60px;
+				background-color: #fff;
+				border: none;
+				border-radius: 4px;
+				font-size: 24px;
+				font-weight: 400;
+				color: #aaaaaa;
+				padding: 10px 20px 10px 58px;
+				@media (max-width: 1500px) {
+					height: 50px;
+					font-size: 22px;
+					padding: 10px 20px 10px 45px;
+				}
+				@media (max-width: 767px) {
+					font-size: 14px;
+					height: 40px;
+					padding: 10px 20px 10px 45px;
+				}
+
+				&::-webkit-input-placeholder {
+					opacity: 1;
+					color: #aaaaaa;
+				}
+
+				&::-moz-placeholder {
+					opacity: 1;
+					color: #aaaaaa;
+				}
+
+				&:-ms-input-placeholder {
+					opacity: 1;
+					color: #aaaaaa;
+				}
+
+				&:-moz-placeholder {
+					opacity: 1;
+					color: #aaaaaa;
+				}
+			}
+		}
+
+		.intro-search-btn-holder {
+			.btn {
+				font-size: 24px;
+				font-weight: 900;
+				background-color: #e63d49;
+				border: 2px #e63d49 solid;
+				height: 60px;
+				@media (max-width: 1500px) {
+					height: 50px;
+					font-size: 22px;
+				}
+				@media (max-width: 767px) {
+					font-size: 14px;
+					height: 40px;
+				}
+
+				&:hover {
+					background-color: #bf3740;
+					color: #fff;
+					border-color: #bf3740;
+				}
+			}
+		}
+		.search-dropdown-container {
+			padding-top: 4px;
+			padding-right: 50px;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			z-index: 10;
+			opacity: 0;
+			visibility: hidden;
+			&.down {
+				opacity: 1;
+				visibility: visible;
+			}
+			@media (max-width: 767px) {
+				padding-right: 0;
+			}
+			.search-dropdown {
+				background-color: #fff;
+				border-radius: 4px;
+				padding: 13px 20px 20px 20px;
+				-webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+				-moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+				box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+				.search-dropdown-title {
+					font-size: 18px;
+					color: #333333;
+					font-weight: 900;
+				}
+				.part-group {
+					position: relative;
+					padding: 9px 0 12px 30px;
+					margin-bottom: 8px;
+					@media (max-width: 767px) {
+						padding: 5px 0 5px 30px;
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+					&:last-child::after {
+						display: none;
+					}
+					&:after {
+						position: absolute;
+						content: '';
+						left: -20px;
+						right: -20px;
+						bottom: 0;
+						height: 1px;
+						background-color: #eeeeee;
+					}
+					.part-info {
+						.part-info-title {
+							font-family: 'Circular Spotify Tx T';
+							font-size: 16px;
+							color: #333333;
+							position: relative;
+							&:before {
+								position: absolute;
+								content:'';
+								top: 50%;
+								transform: translateY(-50%);
+								left: -30px;
+								background: url("../img/parts-group-grey.png") no-repeat center
+							}
+							&.p-ac:before {
+				                width: 18px;
+				                height: 17px;
+				                background-position: -5px -5px;
+				            }
+
+				            &.p-accessories:before {
+				                width: 20px;
+				                height: 18px;
+				                background-position: -61px -5px;
+				            }
+
+				            &.p-audio:before {
+				                width: 18px;
+				                height: 16px;
+				                background-position: -121px -5px;
+				            }
+
+				            &.p-body:before {
+				                width: 18px;
+				                height: 16px;
+				                background-position: -177px -5px;
+				            }
+
+				            &.p-box:before {
+				                width: 21px;
+				                height: 12px;
+				                background-position: -149px -31px;
+				            }
+
+				            &.p-bs:before {
+				                width: 19px;
+				                height: 19px;
+				                background-position: -36px -53px;
+				            }
+
+				            &.p-cc:before {
+				                width: 16px;
+				                height: 20px;
+				                background-position: -180px -31px;
+				            }
+
+				            &.p-electrical:before  {
+				                width: 12px;
+				                height: 19px;
+				                background-position: -120px -61px;
+				            }
+
+				            &.p-engine:before {
+				                width: 20px;
+				                height: 15px;
+				                background-position: -164px -61px;
+				            }
+
+				            &.p-es:before {
+				                width: 20px;
+				                height: 11px;
+				                background-position: -35px -86px;
+				            }
+
+				            &.p-fa:before {
+				                width: 20px;
+				                height: 10px;
+				                background-position: -35px -107px;
+				            }
+
+				            &.p-fs:before {
+				                width: 10px;
+				                height: 20px;
+				                background-position: -95px -107px;
+				            }
+
+				            &.p-gear:before {
+				                width: 18px;
+				                height: 20px;
+				                background-position: -135px -107px;
+				            }
+
+				            &.p-hybrid:before {
+				                width: 15px;
+				                height: 20px;
+				                background-position: -5px -137px;
+				            }
+
+				            &.p-instrument:before {
+				                width: 17px;
+				                height: 20px;
+				                background-position: -55px -137px;
+				            }
+
+				            &.p-interior:before {
+				                width: 18px;
+				                height: 20px;
+				                background-position: -109px -137px;
+				            }
+
+				            &.p-lighting:before {
+				                width: 20px;
+				                height: 12px;
+				                background-position: -165px -137px;
+				            }
+
+				            &.p-lock:before {
+				                width: 10px;
+				                height: 20px;
+				                background-position: -206px -5px;
+				            }
+
+				            &.p-ra:before {
+				                width: 20px;
+				                height: 14px;
+				                background-position: -194px -65px;
+				            }
+
+				            &.p-rs:before {
+				                width: 20px;
+				                height: 18px;
+				                background-position: -195px -113px;
+				            }
+
+				            &.p-steering:before {
+				                width: 19px;
+				                height: 19px;
+				                background-position: -5px -169px;
+				            }
+
+				            &.p-trim:before {
+				                width: 19px;
+				                height: 19px;
+				                background-position: -63px -169px;
+				            }
+
+				            &.p-weels:before {
+				                width: 19px;
+				                height: 19px;
+				                background-position: -121px -169px;
+				            }
+
+				            &.p-window:before {
+				                width: 20px;
+				                height: 13px;
+				                background-position: -5px -113px;
+				            }
+
+				            &.p-ww:before {
+				                width: 20px;
+				                height: 16px;
+				                background-position: -35px -198px;
+				            }
+						}
+						.part-info-text {
+							font-family: 'Circular Spotify Tx T';
+							font-size: 14px;
+							color: #888888;
+						}
+					}
+					.group-items {
+						padding-left: 10px;
+						@media (max-width: 767px) {
+							padding-left: 0;
+						}
+						.group-items-column {
+							ul {
+								li {
+									display: block;
+									float: left;
+									width: 100%;
+									margin-bottom: 4px;
+									padding-right: 10px;
+									@media (max-width: 767px) {
+										margin-bottom: 5px;
+									}
+									a {
+										display: block;
+										font-family: 'Circular Spotify Tx T';
+										font-size: 16px;
+										color: #333333;
+										line-height: 16px;
+										@media (max-width: 767px) {
+											font-size: 14px;
+											line-height: 14px;
+										}
+										strong {
+											font-family: 'Circular';
+											font-weight: 900;
+										}
+										span {
+											display: inline-block;
+											background-color: #fad8db;
+											padding: 0 4px;
+											border-radius: 4px;
+										}
+										&.more {
+											color: #e63d49;
+											margin-top: 18px;
+											&:hover {
+												text-decoration: underline;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.search-dropdown-container.code {
+			padding-right: calc(25% + 5px);
+			z-index: 15;
+			@media (max-width: 767px) {
+				padding-right: 0;
+			}
+			.search-dropdown {
+				@media (max-width: 767px) {
+					padding: 10px
+				}
+				.part-item-block {
+					position: relative;
+					padding: 10px 0 15px 0;
+					transition: background-color 0.2s;
+					@media (max-width: 767px) {
+						padding: 10px 0;
+					}
+					&:hover {
+						background-color: #e5e5e5;
+					}
+					&:hover:before {
+						opacity: 1;
+					}
+					&:hover:after {
+						opacity: 1;
+					}
+					&:before {
+						position: absolute;
+						content: '';
+						top: 0;
+						bottom: 0;
+						left: -20px;
+						width: 20px;
+						background-color: #e5e5e5;
+						opacity: 0;
+						transition: opacity 0.2s;
+						@media (max-width: 767px) {
+							left: -10px;
+							width: 10px;
+						}
+					}
+					&:after {
+						position: absolute;
+						content: '';
+						top: 0;
+						bottom: 0;
+						right: -20px;
+						width: 20px;
+						background-color: #e5e5e5;
+						opacity: 0;
+						transition: opacity 0.2s;
+						@media (max-width: 767px) {
+							right: -10px;
+							width: 10px;
+						}
+					}
+					a {
+						display: block;
+						float: left;
+						position: relative;
+						&::after {
+							position: absolute;
+							content: '';
+							left: -20px;
+							right: -20px;
+							bottom: -15px;
+							height: 1px;
+							background-color: #eeeeee;
+							@media (max-width: 767px) {
+								left: -10px;
+								right: -10px;
+								bottom: -10px;
+							}
+						}
+						.part-item-img {
+							img {
+								max-width: 93px;
+								max-height: 60px;
+								@media (max-width: 767px) {
+									max-width: 60px;
+									max-height: 42px;
+								}
+							}
+						}
+						.part-item-info {
+							.part-item-info-title {
+								font-size: 18px;
+								color: #333333;
+								font-weight: 900;
+								line-height: 22px;
+								margin-bottom: 5px;
+								@media (max-width: 767px) {
+									font-size: 16px;
+									line-height: 20px;
+								}
+							}
+							.part-item-code {
+								font-family: 'Circular Spotify Tx T';
+								font-size: 14px;
+								color: #666666;
+								@media (max-width: 767px) {
+									font-size: 12px;
+								}
+								span {
+									font-family: 'Circular';
+									font-weight: 900;
+									display: inline-block;
+									background-color: #e5c3c6;
+									padding: 0 4px;
+									border-radius: 4px;
+									line-height: 18px;
+								}
+							}
+							.part-item-about {
+								font-family: 'Circular Spotify Tx T';
+								font-size: 14px;
+								color: #888888;
+								line-height: 18px;
+								@media (max-width: 767px) {
+									font-size: 12px;
+									line-height: 16px;
+								}
+							}
+						}
+						.part-item-price {
+							text-align: right;
+							font-size: 16px;
+							color: #333333;
+							font-weight: 400;
+							@media (max-width: 767px) {
+								font-size: 14px;
+							}
+						}
+					}
+				}
+				.show-all {
+					padding-top: 12px;
+					@media (max-width: 767px) {
+						padding-top: 8px;
+					}
+					a {
+						font-size: 14px;
+						font-weight: 900;
+						color: #e63d49;
+						text-transform: uppercase;
+						@media (max-width: 767px) {
+							font-size: 12px;
+						}
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.search-slogan {
+		text-align: center;
+		font-family: 'Circular Spotify Tx T';
+		font-size: 20px;
+		font-weight: 300;
+		color: #fff;
+		margin-bottom: 30px;
+		@media (max-width: 767px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	.row-search-tab-nav {
+		@media (max-width: 767px) {
+			max-width: 280px;
+		}
+		.search-tab-nav, .search-tab-nav-mob {
+			ul {
+				width: 100%;
+				li {
+					width: 32.9%;
+					margin-right: 2px;
+					@media (max-width: 767px) {
+						display: block;
+						width: 100%;
+						margin-right: 0;
+						margin-bottom: 5px;
+					}
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					a {
+						font-size: 16px;
+						font-weight: 900;
+						color: #fff;
+						text-transform: uppercase;
+						background-color: #5c5c5a;
+						border-radius: 0;
+						border-top-right-radius: 4px;
+						border-top-left-radius: 4px;
+						text-align: center;
+						padding: 16px 15px;
+						@media (max-width: 767px) {
+							border-radius: 4px;
+							padding: 5px;
+							font-size: 12px;
+						}
+
+						&:hover {
+							background-color: #6c6c6d;
+						}
+					}
+
+					&.active a {
+						background-color: #6c6c6d;
+					}
+				}
+			}
+		}
+		.search-tab-nav {
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+		.search-tab-nav-mob {
+			display: none;
+			.search-tabs {
+				margin-top: 5px;
+				display: none;
+			}
+			@media (max-width: 767px) {
+				display: block;
+			}
+		}
+	}
+
+	.row-search-tabs {
+		@media (max-width: 767px) {
+			max-width: 320px;
+		}
+		.search-tabs-wrap {
+			@media (max-width: 1199px) {
+				padding: 0 15px;
+			}
+			@media (max-width: 767px) {
+				padding: 0 10px;
+				display: none;
+			}
+		}
+	}
+}
+
+.choose-container {
+	background-size: cover !important;
+	padding: 60px 0 90px 0;
+	@media (max-width: 1400px) {
+		padding: 60px 15px 90px 15px;
+	}
+	@media (max-width: 991px) {
+		padding: 40px 15px 70px 15px;
+	}
+	@media (max-width: 767px) {
+		padding: 30px 10px 40px 10px;
+	}
+
+	.section-title {
+		color: #fff;
+	}
+
+	.section-slogan {
+		color: #cccccc;
+		margin-bottom: 40px;
+		@media (max-width: 991px) {
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	.row-choose {
+		@media (max-width: 767px) {
+			max-width: 320px;
+		}
+		.choose-items {
+			ul {
+				width: 100%;
+
+				li {
+					padding-top: 83px;
+					display: inline-block;
+					float: left;
+					width: 18.841%;
+					margin-right: 1.45%;
+					color: #fff;
+					text-align: center;
+					position: relative;
+					@media (max-width: 1400px) {
+						width: 18.840%;
+					}
+					@media (max-width: 991px) {
+						padding-top: 65px;
+					}
+					@media (max-width: 767px) {
+						width: 100%;
+						margin-right: 0;
+						margin-bottom: 20px;
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					&:before {
+						position: absolute;
+						content: '';
+						top: 0;
+						left: 50%;
+						transform: translateX(-50%);
+						width: 77px;
+						height: 71px;
+						background-size: contain !important;
+						@media (max-width: 991px) {
+							width: 52px;
+						}
+					}
+
+					&.order:before {
+						background: url("../img/choose-1.png") no-repeat center center;
+						@media (max-width: 991px) {
+							width: 52px;
+						}
+					}
+
+					&.warranty:before {
+						background: url("../img/choose-2.png") no-repeat center center;
+						@media (max-width: 991px) {
+							width: 49px;
+						}
+					}
+
+					&.business:before {
+						background: url("../img/choose-3.png") no-repeat center center;
+						@media (max-width: 991px) {
+							width: 55px;
+						}
+					}
+
+					&.delivery:before {
+						background: url("../img/choose-4.png") no-repeat center center;
+						@media (max-width: 991px) {
+							width: 55px;
+						}
+					}
+
+					&.service:before {
+						background: url("../img/choose-5.png") no-repeat center center;
+						@media (max-width: 991px) {
+							width: 50px;
+						}
+					}
+
+					.choose-items-title {
+						font-size: 24px;
+						font-weight: 900;
+						color: #fff;
+						margin-bottom: 9px;
+						@media (max-width: 1400px) {
+							font-size: 22px;
+						}
+						@media (max-width: 1200px) {
+							font-size: 20px;
+							margin-bottom: 5px;
+						}
+						@media (max-width: 991px) {
+							font-size: 16px;
+						}
+					}
+
+					.choose-items-text {
+						font-size: 18px;
+						font-family: 'Circular Spotify Tx T';
+						font-weight: 300;
+						color: #cccccc;
+						line-height: 28px;
+						padding: 0 5px;
+						@media (max-width: 1400px) {
+							font-size: 16px;
+							line-height: 26px;
+						}
+						@media (max-width: 1200px) {
+							font-size: 14px;
+							line-height: 22px;
+						}
+						@media (max-width: 991px) {
+							font-size: 12px;
+							line-height: 18px;
+						}
+						@media (max-width: 767px) {
+							padding: 0 30px;
+						}
+
+						strong {
+							font-family: 'Circular';
+							font-weight: 700;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.grey-bg {
+	background-color: #eeeeee;
+	display: block;
+	padding-top: 60px;
+	@media (max-width: 991px) {
+		padding-top: 40px;
+	}
+	@media (max-width: 767px) {
+		padding-top: 20px;
+	}
+	.parts-tab-nav {
+		text-align: center;
+		margin-bottom: 24px;
+		ul {
+			li {
+				display: inline-block;
+				float: none;
+				&:last-child {
+					@media (max-width: 767px) {
+						margin-bottom: 0;
+					}
+				}
+				@media (max-width: 767px) {
+					display: block;
+					margin-bottom: 3px;
+				}
+				a {
+					display: block;
+					font-size: 16px;
+					font-weight: 900;
+					color: #999999;
+					text-transform: uppercase;
+					background: none !important;
+					@media (max-width: 767px) {
+						display: inline-block;
+						padding: 5px;
+						font-size: 14px;
+					}
+					&:hover {
+						background: none;
+						color: #e63d49;
+					}
+				}
+				&.active a {
+					background: none;
+					color: #000000 !important;
+				}
+			}
+		}
+	}
+
+	.row-popular-parts {
+		@media (max-width: 1400px) {
+			max-width: 1200px;
+			padding: 0 15px;
+		}
+		@media (max-width: 1199px) {
+			max-width: 992px;
+		}
+		@media (max-width: 767px) {
+			max-width: 260px;
+			max-width: 290px;
+		}
+		.parts-tab-block {
+			margin-bottom: 100px;
+			@media (max-width: 1199px) {
+				margin-bottom: 60px;
+			}
+			@media (max-width: 991px) {
+				margin-bottom: 40px;
+			}
+			@media (max-width: 767px) {
+				margin-bottom: 20px;
+			}
+			.parts-item {
+				ul {
+					width: 100%;
+					li {
+						display: inline-block;
+						float: left;
+						width: 18.841%;
+						height: 455px;
+						margin-right: 1.45%;
+						background-color: #fff;
+						padding: 0 15px;
+						border-radius: 4px;
+						position: relative;
+						@media (max-width: 1400px) {
+							width: 19.2%;
+							height: 410px;
+							margin-right: 1%;
+						}
+						@media (max-width: 1199px) {
+							height: 430px;
+						}
+						@media (max-width: 991px) {
+							height: 370px;
+							width: 49%;
+							margin-bottom: 20px;
+						}
+						@media (max-width: 767px) {
+							height: auto !important;
+							width: 100%;
+						}
+						&:hover {
+							-webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+							-moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+							box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+						}
+						&:last-child {
+							margin-right: 0;
+							background: none;
+							@media (max-width: 991px) {
+								height: 160px;
+							}
+						}
+						&:last-child:hover {
+							box-shadow: none;
+						}
+						&:hover .parts-title {
+							color: #e63d49;
+						}
+						&:hover .part-favorite  {
+							visibility: visible;
+							opacity: 1;
+						}
+						.parts-image {
+							position: relative;
+							top: 5px;
+							height: 175px;
+							text-align: center;
+							@media (max-width: 1199px) {
+								height: 140px;
+							}
+
+							span {
+								position: absolute;
+								left: 0;
+								right: 0;
+								top: 50%;
+								transform: translateY(-50%);
+								display: inline-block;
+
+								img {
+									max-width: 230px;
+									max-height: 140px;
+									@media (max-width: 1199px) {
+										max-width: 150px;
+										max-height: 100px;
+									}
+								}
+							}
+						}
+						.parts-title {
+							font-size: 18px;
+							font-weight: 900;
+							color: #333333;
+							line-height: 22px;
+							margin-bottom: 5px;
+							transition: color 0.2s;
+							@media (max-width: 1400px) {
+								font-size: 15px;
+								line-height: 19px;
+							}
+							@media (max-width: 1199px) {
+								font-size: 16px;
+								line-height: 20px;
+							}
+							@media (max-width: 991px) {
+								font-size: 18px;
+								line-height: 22px;
+							}
+						}
+						.parts-info-wrap {
+							margin-bottom: 10px;
+							.parts-info {
+								font-family: 'Circular Spotify Tx T';
+								font-size: 12px;
+								line-height: 18px;
+								color: #888888;
+								padding-top: 3px;
+								border-bottom: 1px #eeeeee solid;
+								@media (max-width: 1400px) {
+									font-size: 10px;
+									line-height: 16px;
+								}
+							}
+						}
+						.parts-info-status-wrap {
+							.parts-info-status {
+								border-bottom: 1px #eeeeee solid;
+								&:last-child {
+									border-bottom: 0;
+								}
+								.info-status-left, .info-status-right {
+									font-family: 'Circular Spotify Tx T';
+									font-size: 12px;
+									color: #666666;
+									@media (max-width: 1400px) {
+										font-size: 10px;
+									}
+									strong {
+										font-family: 'Circular';
+										font-weight: 900;
+									}
+								}
+								.info-status-right {
+									text-align: right;
+									@media (max-width: 1199px) {
+										text-align: left;
+									}
+									@media (max-width: 991px) {
+										text-align: right;
+									}
+								}
+							}
+						}
+						.parts-price {
+							font-size: 24px;
+							font-weight: 400;
+							color: #333333;
+							position: absolute;
+							left: 15px;
+							right: 15px;
+							bottom: 49px;
+							@media (max-width: 991px) {
+								position: relative;
+								left: auto;
+								right: auto;
+								bottom: auto;
+							}
+							span {
+								font-family: 'Circular Spotify Tx T';
+								font-size: 16px;
+								color: #333333;
+								margin-left: 5px;
+								display: none;
+								position: relative;
+								&:after {
+									position: absolute;
+									content: '';
+									left: 0;
+									right: 0;
+									top: 50%;
+									height: 1px;
+									background-color: #333333;
+								}
+							}
+							&.hold {
+								color: #e63d49;
+								span {
+									display: inline-block;
+								}
+							}
+						}
+						.parts-details {
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							display: inline-block;
+							height: 36px;
+							@media (max-width: 767px) {
+								position: relative;
+								bottom: auto;
+								width: 100%;
+								display: block;
+								float: left;
+							}
+							a {
+								display: none;
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								text-align: center;
+								font-size: 12px;
+								font-weight: 900;
+								line-height: 36px;
+								color: #fff;
+								text-transform: uppercase;
+								background-color: #e63d49;
+								border-bottom-left-radius: 4px;
+								border-bottom-right-radius: 4px;
+								transition: background-color 0.2s, opacity 0.2s,border-color 0.2s;
+								@media (max-width: 767px) {
+									left: -15px;
+									right: -15px;
+								}
+								&:hover {
+									background-color: #bf3740;
+									border-color: #bf3740;
+								}
+							}
+						}
+						.part-favorite {
+							position: absolute;
+							top: 10px;
+							right: 10px;
+							width: 26px;
+							height: 24px;
+							background: url("../img/favorite.png") no-repeat center center;
+							visibility: hidden;
+							opacity: 0;
+							transition: visibility 0.2s, opacity 0.2s;
+						}
+						.discount {
+							position: absolute;
+							top: 10px;
+							left: 10px;
+							width: 40px;
+							height: 40px;
+							border-radius: 100%;
+							background-color: #e43d48;
+							font-size: 18px;
+							font-weight: 900;
+							color: #fff;
+							line-height: 14px;
+							text-align: center;
+							@media (max-width: 991px) {
+								font-size: 16px;
+							}
+							span {
+								display: block;
+								position: relative;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+							}
+						}
+						a {
+							display: block;
+							.parts-more {
+								position: absolute;
+								left: 50%;
+								top: 50%;
+								transform: translate(-50%, -50%);
+								transition: opacity 0.2s;
+								.parts-more-cross {
+									margin-bottom: 20px;
+									text-align: center;
+								}
+								.parts-more-text {
+									font-size: 16px;
+									font-weight: 900;
+									color: #e63d49;
+									text-align: center;
+									text-transform: uppercase;
+								}
+								&:hover {
+									opacity: 0.7;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.request-block {
+	padding: 50px 15px 70px 15px;
+	text-align: center;
+	@media (max-width: 991px) {
+		padding: 40px 15px;
+	}
+	@media (max-width: 767px) {
+		padding: 20px 10px;
+	}
+	.request-title {
+		font-size: 24px;
+		font-weight: 900;
+		color: #333333;
+		margin-bottom: 13px;
+		@media (max-width: 991px) {
+			font-size: 22px;
+			margin-bottom: 5px;
+		}
+		@media (max-width: 767px) {
+			font-size: 20px;
+		}
+	}
+	.request-slogan {
+		font-family: 'Circular Spotify Tx T';
+		font-size: 18px;
+		color: #777777;
+		margin-bottom: 21px;
+		@media (max-width: 991px) {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+		@media (max-width: 767px) {
+			font-size: 14px;
+		}
+	}
+	.btn {
+		display: inline-block;
+		font-size: 24px;
+		font-weight: 900;
+		width: 260px;
+		height: 60px;
+		background-color: #e63d49;
+		border: 2px #e63d49 solid;
+		padding: 0;
+		line-height: 54px;
+		position: relative;
+		@media (max-width: 991px) {
+			font-size: 22px;
+			line-height: 44px;
+			height: 50px;
+			width: 230px;
+		}
+		@media (max-width: 767px) {
+			font-size: 20px;
+			line-height: 40px;
+			height: 46px;
+			width: 200px;
+		}
+		&:before {
+			position: relative;
+			display: inline-block;
+			content: '';
+			top: 2px;
+			left: -10px;
+			width: 24px;
+			height: 23px;
+			background: url("../img/req-sp.png") no-repeat center center;
+			background-position: -5px -5px;
+			@media (max-width: 991px) {
+				top: 4px;
+			}
+			@media (max-width: 767px) {
+				top: 5px;
+				left: -6px;
+			}
+		}
+		&:hover {
+			background-color: #bf3740;
+			color: #fff;
+			border-color: #bf3740;
+		}
+	}
+}

@@ -1,0 +1,197 @@
+/* Reset */
+
+@font-face {
+	font-family: 'Circular Spotify Tx T';
+	src: url('../fonts/circular-Light.ttf');
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Circular';
+	src: url('../fonts/lineto-circular-pro-book.ttf');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Circular';
+	src: url('../fonts/lineto-circular-pro-medium.ttf');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Circular';
+	src: url('../fonts/lineto-circular-pro-bold.ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Circular';
+	src: url('../fonts/lineto-circular-pro-black.ttf');
+	font-weight: 900;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+	background: #fff;
+	font-family: 'Circular', sans-serif;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a:hover, a:focus, a:active {
+	text-decoration: none;
+}
+
+.layouts-title {
+	font-size: 26px;
+	margin:15px 0px;
+}
+
+.layouts ul li {
+	margin-bottom:5px;
+}
+
+.layouts ul li a {
+	font-size: 17px;
+	display: inline-block;
+	padding:3px 10px;
+}
+
+.layouts ul li a:hover {
+	background:#000;
+	color:#fff;
+}
+
+/* -- END RESET -- */
+
+.row {
+	max-width: 1380px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.row-parts-categoty, .row-choose, .row-popular-parts, .row-order {
+	max-width: 1380px;
+}
+
+.row-md {
+	max-width: 1330px;
+}
+
+.row-intro-search, .row-search-tab-nav {
+	max-width: 640px;
+}
+
+.row-search-tabs, .row-ask, .row-request, .row-cart {
+	max-width: 1100px;
+}
+
+.row-register {
+	max-width: 540px;
+}
+
+.row-check-out {
+	max-width: 1240px;
+}
+
+.row-order-review {
+	max-width: 600px;
+}
+
+.row-costumer-details {
+	max-width: 768px;
+}
+
+/* -- main styles -- */
+
+.nopad {
+	padding:0px;
+}
+
+.nopadleft {
+	padding-left:0px;
+}
+
+.nopadright {
+	padding-right:0px;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+strong {
+	font-weight: bold;
+}
+
+i {
+	font-style: italic;
+}
+
+em {
+	font-style: italic;
+}
+
+img {
+	max-width: 100%;
+}
+
+.clear {
+	clear:both;
+}
+
+/*   start   */
