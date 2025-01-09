@@ -2,8 +2,16 @@ from rest_framework import viewsets
 from django.shortcuts import get_object_or_404, render
 from .models import Category, Part
 from .serializers import CategorySerializer, PartSerializer
-from rest_framework.response import Response
 from rest_framework.decorators import action
+
+from rest_framework import generics, status
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework_simplejwt.tokens import RefreshToken
+from .serializers import RegisterSerializer
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from django.contrib.auth.models import User
 
 # Представления для API
 class CategoryViewSet(viewsets.ModelViewSet):
@@ -70,3 +78,39 @@ def part_detail(request, part_id):
     part = get_object_or_404(Part, id=part_id)
     additional_fields = part.field_values.all()
     return render(request, 'part_detail.html', {'part': part, 'additional_fields': additional_fields})
+
+class RegisterView(generics.CreateAPIView):
+    serializer_class = RegisterSerializer
+    permission_classes = [AllowAny]
+
+class LogoutView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        try:
+            refresh_token = request.data["refresh"]
+            token = RefreshToken(refresh_token)
+            token.blacklist()
+            return Response({"message": "Вы успешно вышли из системы"}, status=status.HTTP_200_OK)
+        except Exception:
+            return Response({"error": "Ошибка при выходе"}, status=status.HTTP_400_BAD_REQUEST)
+
+class MyApiView(APIView):
+    permission_classes = [IsAuthenticated]  # Требуем аутентификацию
+
+    def get(self, request):
+        # В этом месте код, который будет выполняться для авторизованного пользователя
+        user = request.user  # Получаем пользователя через токен
+        return Response({'message': f'Hello {user.username}!'})
+
+
+class UserProfileView(APIView):
+    permission_classes = [IsAuthenticated]  # Только для аутентифицированных пользователей
+
+    def get(self, request):
+        user = request.user  # Данные текущего пользователя
+        return Response({
+            'username': user.username,
+            'email': user.email,
+            # Добавьте другие данные, которые вы хотите вернуть
+        })

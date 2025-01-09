@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Category, Part, PartFieldValue
+from django.contrib.auth.models import User
 
 class PartFieldValueSerializer(serializers.ModelSerializer):
     class Meta:
@@ -35,3 +36,21 @@ class PartSerializer(serializers.ModelSerializer):
     class Meta:
         model = Part
         fields = ['id', 'name', 'description', 'category', 'created_at', 'field_values', 'price', 'image_url']  # Добавили price и image_url
+
+
+class RegisterSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True, style={'input_type': 'password'})
+    password2 = serializers.CharField(write_only=True, style={'input_type': 'password'})
+
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'password', 'password2')
+
+    def validate(self, attrs):
+        if attrs['password'] != attrs['password2']:
+            raise serializers.ValidationError({"password": "Пароли не совпадают"})
+        return attrs
+
+    def create(self, validated_data):
+        validated_data.pop('password2')
+        return User.objects.create_user(**validated_data)

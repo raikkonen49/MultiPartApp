@@ -1,8 +1,8 @@
-// PartCard.js
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Top_meniu from '../header/top_meniu/Top_meniu';
+import { CartContext } from '../cart/CartContext'; // Импортируем контекст корзины
 
 const PartCard = () => {
     const { id } = useParams(); // Получаем ID товара из URL
@@ -10,6 +10,7 @@ const PartCard = () => {
     const [fieldValues, setFieldValues] = useState([]); // Для хранения дополнительных полей
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const { addToCart, cartItems } = useContext(CartContext); // Получаем корзину и функцию добавления в корзину
 
     useEffect(() => {
         const fetchPart = async () => {
@@ -31,13 +32,44 @@ const PartCard = () => {
     if (loading) return <p>Загрузка...</p>;
     if (error) return <p>{error}</p>;
 
+    const handleAddToCart = () => {
+        if (part) {
+            // Проверка, что cartItems не undefined и существует
+            if (!Array.isArray(cartItems)) {
+                alert("Ошибка корзины");
+                return;
+            }
+
+            // Проверка, есть ли товар уже в корзине
+            const existingItem = cartItems.find(item => item.id === part.id);
+
+            if (existingItem) {
+                alert(`Товар "${part.name}" уже в корзине`);
+            } else {
+                addToCart({
+                    id: part.id,
+                    name: part.name,
+                    price: part.price,
+                    image_url: part.image_url,
+                });
+                alert(`Товар "${part.name}" добавлен в корзину`);
+            }
+        }
+    };
+
     return (
         <div>
             <div>
                 <Top_meniu />
             </div>
             {part && (
+
+
                 <div className="row row-order">
+                    <div className="col-xs-12 nopad page-title">
+                        <h1>{part.name}</h1>
+                    </div>
+
                     <div className="col-xs-12 nopad parts-order-wrap">
                         <div className="col-xs-12 col-sm-12 col-md-6 nopad parts-order-slider-block">
                             {part.image_url ? (
@@ -96,8 +128,12 @@ const PartCard = () => {
                                     {part.price}
                                 </div>
                                 <div className="col-xs-12 nopad parts-order-functions">
-                                    <a className="btn" data-toggle="modal" data-target="#popup-1" href="#" title="">Add to Cart</a>
-                                    <a className="btn wish" href="#" title="">Add to Wish List</a>
+                                <button className="btn" onClick={handleAddToCart}>
+                                    Add to Cart
+                                </button>
+                                <button className="btn wish">
+                                    Add to Wish List
+                                </button>
                                 </div>
                             </div>
                             <div className="col-xs-12 in-stock-block hold">
